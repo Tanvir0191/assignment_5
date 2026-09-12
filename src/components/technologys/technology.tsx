@@ -38,11 +38,33 @@ function Technology() {
 
                 ))}
             </div>
-            <div className="border border-gray-200 bg-white p-5 rounded-2xl shadow-sm">
-                <h2 className="text-lg font-bold">
-                    Your Stack
-                </h2>
+
+
+
+               <div>
+
+          <div className="border border-gray-200 bg-white p-5 rounded-2xl shadow-sm">
+
+            <h2 className="text-lg font-bold">
+              Your Stack
+            </h2>
+
+            <p className="text-sm text-gray-400 mt-2">
+              No technologies selected yet.
+            </p>
+
+
+          
+            <div className="border border-dashed border-gray-300 rounded-xl p-8 mt-5 text-center">
+
+              <p className="text-sm text-gray-400">
+                Your stack is empty.
+              </p>
+
             </div>
+
+          </div>
+          </div>
 
 
 
