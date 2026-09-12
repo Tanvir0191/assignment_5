@@ -1,16 +1,17 @@
-import { use } from 'react';
+import { useEffect, useState } from 'react'
+function Technology() {
+    const [technologies, setTechnologies] = useState<any[]>([])
 
-const Technology = ({ technologyPromise }: { technologyPromise: Promise<unknown> }) => {
+  useEffect(() => {
 
-    const data = use(technologyPromise)
+    console.log('Technology component loaded')
 
-    console.log(data)
+  }, [])
+  return (
+    <div>
+      Technology
+    </div>
+  )
+}
 
-    return (
-        <div>
-            <h2>Technology</h2>
-        </div>
-    );
-};
-
-export default Technology;
+export default Technology
