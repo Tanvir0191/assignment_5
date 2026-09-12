@@ -30,9 +30,9 @@ function Technology() {
                             <p>rating: ⭐ {technology.rating}</p>
                             <p>difficulty: {technology.difficulty}</p>
                         </div>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600 transition duration-300 items-center justify-center">
-                            Learn More
-                        </button>
+                        <button className="w-full bg-gray-950 text-white text-sm py-2.5 rounded-lg mt-4 hover:bg-gray-800 transition">
+                Add to Stack
+              </button>
                     </div>
 
 
