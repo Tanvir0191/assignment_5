@@ -22,7 +22,7 @@ function Technology() {
 
 
     useEffect(() => {
-        fetch('/public/data.json')
+        fetch('./data.json')
             .then((res) => res.json())
             .then((data) => {
                 setTechnologies(data)
@@ -30,20 +30,20 @@ function Technology() {
     }, [])
 
 
-   const addToStack = (technology: TechnologyData) => {
-  const alreadyExists = stack.some(
-    item => item.id === technology.id
-  )
+    const addToStack = (technology: TechnologyData) => {
+        const alreadyExists = stack.some(
+            item => item.id === technology.id
+        )
 
-  if (alreadyExists) {
-    toast.error(`${technology.name} is already in your stack!`)
-    return
-  }
+        if (alreadyExists) {
+            toast.error(`${technology.name} is already in your stack!`)
+            return
+        }
 
-  setStack([...stack, technology])
+        setStack([...stack, technology])
 
-  toast.success(`${technology.name} added to your stack!`)
-}
+        toast.success(`${technology.name} added to your stack!`)
+    }
 
     const removeFromStack = (id: string) => {
         setStack(stack.filter(item => item.id !== id))
@@ -59,11 +59,12 @@ function Technology() {
                         <img src={technology.icon} alt={technology.name} />
                         <h2 className='text-2xl font-bold'>{technology.name}</h2>
                         <p>{technology.description}</p>
-                        <div className='flex  gap-5'>
+                        <div className='flex justify-between gap-5'>
+                            <p> {technology.category}</p>
 
 
                             <p>rating: ⭐ {technology.rating}</p>
-                            <p>difficulty: {technology.difficulty}</p>
+                            <p>{technology.difficulty}</p>
                         </div>
 
                         <button
