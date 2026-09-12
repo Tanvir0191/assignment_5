@@ -4,6 +4,7 @@ import Banner from './components/baner'
 import Footer from './components/footer'
 
 import Technology from './components/technologys/technology'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -18,6 +19,7 @@ function App() {
 
 
       <Technology />
+      <Toaster />
 
       <Footer />
     </>

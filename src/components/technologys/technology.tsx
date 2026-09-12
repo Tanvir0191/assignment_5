@@ -30,9 +30,20 @@ function Technology() {
     }, [])
 
 
-    const addToStack = (technology: TechnologyData) => {
-        setStack([...stack, technology])
-    }
+   const addToStack = (technology: TechnologyData) => {
+  const alreadyExists = stack.some(
+    item => item.id === technology.id
+  )
+
+  if (alreadyExists) {
+    toast.error(`${technology.name} is already in your stack!`)
+    return
+  }
+
+  setStack([...stack, technology])
+
+  toast.success(`${technology.name} added to your stack!`)
+}
 
     const removeFromStack = (id: string) => {
         setStack(stack.filter(item => item.id !== id))
